@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { styled } from "styled-components";
-import { Helmet } from "react-helmet-async";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 let intervalId = undefined;
 
@@ -41,13 +41,13 @@ const Counter = () => {
   const minute = parseInt(count / 60) % 60;
   const second = count % 60;
   return (
+    <HelmetProvider>
     <CounterContainer>
       <Helmet>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <title>
-          BBC Home - Breaking News, World News, US News, Sports, Business,
-          Innovation, Climate, Culture, Travel, Video &amp; Audio
+          Hi Thiru | The Big Helmet 
         </title>
         <meta
           property="og:title"
@@ -95,7 +95,7 @@ const Counter = () => {
           {second}
         </p>
       </div>
-    </CounterContainer>
+    </CounterContainer></HelmetProvider>
   );
 };
 

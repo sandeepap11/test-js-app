@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "technology";
+  src: url("./fonts/technology/Technology.ttf");
+}
+
+body {
+  font-family: Helvetica;
+}
